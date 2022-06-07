@@ -1,0 +1,84 @@
+﻿@model IEnumerable<Musica12.Models.tb_MUSIC>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<body style="background-color: #34495E ">
+
+    <header style="background-color: #2C3E50">
+
+
+        <font color="White" size="40" face="Garamond">
+
+            Repertorio Musical
+
+            <img src="~/images/albimt12.png" />
+
+        </font>
+    </header>
+    <div style="background-color: #D5DBDB">
+
+        <p>
+
+            @Html.ActionLink("Crear Nuevo ", "Create")
+
+
+        </p>
+    </div>
+    </font>
+    <table class="table" style="background-color: white "  >
+        
+        <tr>
+            <th style="background-color: #F5EEF8" >
+                @Html.DisplayNameFor(model => model.titulo)
+            </th>
+            <th style="background-color: #F5EEF8">
+                @Html.DisplayNameFor(model => model.autor)
+            </th>
+            <th style="background-color: #F5EEF8">
+                @Html.DisplayNameFor(model => model.album)
+            </th>
+            <th style="background-color: #F5EEF8">
+                @Html.DisplayNameFor(model => model.genero)
+            </th>
+            <th style="background-color: #F5EEF8">
+                @Html.DisplayNameFor(model => model.fecha_lanzamiento)
+            </th>
+            <th style="background-color: #F5EEF8">
+                @Html.DisplayNameFor(model => model.duracion)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td >
+                    @Html.DisplayFor(modelItem => item.titulo)
+                </td>
+                <td >
+                    @Html.DisplayFor(modelItem => item.autor)
+                </td>
+                <td >
+                    @Html.DisplayFor(modelItem => item.album)
+                </td>
+                <td >
+                    @Html.DisplayFor(modelItem => item.genero)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.fecha_lanzamiento)
+                </td>
+                <td >
+                    @Html.DisplayFor(modelItem => item.duracion)
+                </td>
+                <td style="background-color: #F5EEF8">
+                    @Html.ActionLink("Editar", "Edit", new { id = item.Idmusica }) |
+                    @Html.ActionLink("Detalles", "Details", new { id = item.Idmusica }) |
+                    @Html.ActionLink("Eliminar", "Delete", new { id = item.Idmusica })
+                </td>
+            </tr>
+        }
+
+    </table>
+</body>

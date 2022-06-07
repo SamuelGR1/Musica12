@@ -1,0 +1,82 @@
+﻿@model Musica12.Models.tb_MUSIC
+
+@{
+    ViewBag.Title = "Details";
+}
+<body style="background-color: #A569BD ">
+
+</body>
+<font color="">
+
+
+</font>
+<h2>
+
+    Detalles
+    <img src="~/images/save.png" />
+
+
+</h2>
+
+<div style="background-color: #D7BDE2">
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.titulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.autor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.autor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.album)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.album)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.genero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.genero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fecha_lanzamiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecha_lanzamiento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.duracion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.duracion)
+        </dd>
+
+    </dl>
+</div>
+<div style="background-color:#D7BDE2">
+    <p>
+        @Html.ActionLink("Editar", "Edit", new { id = Model.Idmusica }) |
+        @Html.ActionLink("Volver a la Lista", "Index")
+    </p>
+
+</div>
+

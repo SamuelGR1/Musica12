@@ -1,0 +1,82 @@
+﻿@model Musica12.Models.tb_MUSIC
+
+@{
+    ViewBag.Title = "Delete";
+}
+<body style="background-color: #D98880 ">
+
+
+
+    <font color="white">
+
+
+            <h2>
+                Eliminar
+                <img src="~/images/216684.png" />
+            </h2>
+       
+        <h3>Estas Seguro que quieres Eliminar?</h3>
+        <div style="background-color: #CD6155"
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.titulo)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.titulo)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.autor)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.autor)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.album)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.album)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.genero)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.genero)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.fecha_lanzamiento)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.fecha_lanzamiento)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.duracion)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.duracion)
+                </dd>
+
+            </dl>
+    </font>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div  style="background-color: #FADBD8">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Volver a la Lista", "Index")
+        </div>
+    }
+    </div>
+</body>
